@@ -92,7 +92,7 @@
 }
 @media all and (min-width: 1024px) {
   #kv > .inner .kv_container .kv_main {
-    background: url("/img/index/kv_main_pc.png") no-repeat center center/contain;
+    background: url("../img/index/kv_main_pc.png") no-repeat center center/contain;
     aspect-ratio: 1790/616;
   }
 }
