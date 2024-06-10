@@ -54,7 +54,7 @@
 }
 
 #kv {
-  background: url("/img/index/kv_bg.jpg") no-repeat center center/cover;
+  background: url("../img/index/kv_bg.jpg") no-repeat center center/cover;
   background-color: #1f150b;
   height: 100vh;
 }
@@ -80,7 +80,7 @@
   transform: translateY(0);
 }
 #kv > .inner .kv_container .kv_main {
-  background: url("/img/index/kv_main_mb.png") no-repeat center center/contain;
+  background: url("../img/index/kv_main_mb.png") no-repeat center center/contain;
   aspect-ratio: 556/580;
   transition-delay: 0.2s;
 }
