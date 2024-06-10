@@ -1,0 +1,350 @@
+:root {
+  --red_word:#AF002C;
+  --swiper-navigation-color: #333;
+  --swiper-pagination-color: var(--red_word);
+}
+
+.index_slider {
+  width: 100%;
+}
+.index_slider .swiper-container {
+  width: 100%;
+  height: calc(100vh - 30vw);
+  overflow: hidden;
+  --swiper-navigation-color: #fff;
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bottom: 5%;
+}
+.index_slider .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.index_slider .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.index_slider .swiper-container .swiper-button::after {
+  font-size: 4em;
+}
+@media all and (min-width: 1024px) {
+  .index_slider .swiper-container .swiper-button::after {
+    font-size: 5em;
+  }
+}
+.index_slider .swiper-container .swiper-button.swiper-button-next {
+  right: 3%;
+}
+@media all and (min-width: 769px) {
+  .index_slider .swiper-container .swiper-button.swiper-button-next {
+    right: 5%;
+  }
+}
+.index_slider .swiper-container .swiper-button.swiper-button-prev {
+  left: 3%;
+}
+@media all and (min-width: 769px) {
+  .index_slider .swiper-container .swiper-button.swiper-button-prev {
+    left: 5%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .index_slider .swiper-container {
+    height: calc(100vh - 3em);
+  }
+}
+
+#kv {
+  background: url("/img/index/kv_bg.jpg") no-repeat center center/cover;
+  background-color: #1f150b;
+  height: 100vh;
+}
+#kv > .inner {
+  position: relative;
+  height: 100%;
+}
+#kv > .inner .kv_container {
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  top: calc(50% - 1em);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#kv > .inner .kv_container ._animation {
+  opacity: 0;
+  transform: translateY(3em);
+  transition: all 0.8s ease-out;
+}
+#kv > .inner .kv_container ._animation.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#kv > .inner .kv_container .kv_main {
+  background: url("/img/index/kv_main_mb.png") no-repeat center center/contain;
+  aspect-ratio: 556/580;
+  transition-delay: 0.2s;
+}
+@media (max-width: 1023px) {
+  #kv > .inner .kv_container .kv_main {
+    margin: 0 auto;
+    max-width: 60vh;
+  }
+}
+@media all and (min-width: 1024px) {
+  #kv > .inner .kv_container .kv_main {
+    background: url("/img/index/kv_main_pc.png") no-repeat center center/contain;
+    aspect-ratio: 1790/616;
+  }
+}
+#kv > .inner .kv_container .kv_content {
+  margin-top: 5vh;
+  text-align: center;
+  color: #fff;
+  line-height: 1.7;
+  transition-delay: 0.5s;
+}
+@media (max-width: 600px) {
+  #kv > .inner .kv_container .kv_content {
+    font-size: 3.2vw;
+  }
+}
+#kv .filter_bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+#kv .filter_bar .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #kv .filter_bar .inner {
+    width: 100%;
+  }
+}
+#kv .filter_bar .inner .filter_block {
+  position: relative;
+  width: 50%;
+}
+#kv .filter_bar .inner .filter_block:first-child::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 3em;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+}
+#kv .filter_bar .inner .filter_block .filter_caption > div {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1.5em 1em;
+}
+#kv .filter_bar .inner .filter_block .filter_caption > div._open_filter {
+  padding: 2em;
+}
+#kv .filter_bar .inner .filter_block .filter_caption > div .caption {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+#kv .filter_bar .inner .filter_block .filter_caption > div .reset,
+#kv .filter_bar .inner .filter_block .filter_caption > div .close {
+  cursor: pointer;
+}
+#kv .filter_bar .inner .filter_block .filter_caption > div .reset {
+  flex-shrink: 0;
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._origin {
+  cursor: pointer;
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._origin._open_filter .caption {
+  flex-grow: 1;
+  color: var(--red_word);
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._open {
+  display: none;
+  gap: 1em;
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._open .search {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  margin-right: 2em;
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._open .search::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -0.5em;
+  background-color: #ddd;
+}
+#kv .filter_bar .inner .filter_block .filter_caption ._open .search input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  font-size: 1.2em;
+  height: 1em;
+}
+#kv .filter_bar .inner .filter_block > dd {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 0 1em;
+  display: none;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category {
+  border-top: 1px solid #ddd;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dt {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 2em;
+  gap: 1em;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dt .f_caption {
+  font-size: 1.1em;
+  flex-grow: 1;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dt:hover {
+  background-color: #f6f6f6;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dd {
+  padding: 0 2em;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-out;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dd .s_category {
+  margin-bottom: 1em;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dd .s_category > dt {
+  padding: 0.5em 0;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dd .s_category > dt .s_caption {
+  color: var(--red_word);
+}
+#kv .filter_bar .inner .filter_block > dd .f_category > dd .s_category > dd {
+  padding: 0 1em;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category.open > dt .icon {
+  rotate: 180deg;
+}
+#kv .filter_bar .inner .filter_block > dd .f_category.open > dd {
+  overflow: auto;
+  height: 25vh;
+  height: calc(100vh - 20em);
+}
+#kv .filter_bar .inner .filter_block > dd .list li label {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding: 0.5em 0;
+}
+#kv .filter_bar .inner .filter_block > dd .list li label input {
+  display: none;
+  margin-right: 0.5em;
+}
+#kv .filter_bar .inner .filter_block > dd .list li label:has(input:checked):before {
+  content: "";
+  width: 1em;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: -1.5em;
+  background: url("../img/icon_check.svg") no-repeat center center/contain;
+}
+#kv .filter_bar .inner .filter_block > dd .list li:hover {
+  background-color: #f9f9f9;
+}
+#kv .filter_bar .inner .filter_block > dd .list.years {
+  border-top: 1px solid #ddd;
+  padding: 0 2em;
+  padding-bottom: 1em;
+}
+#kv .filter_bar .inner .filter_block > dd .list.years li {
+  margin-top: 0;
+}
+#kv .filter_bar .inner .filter_block > dd .list.years li label {
+  padding: 1em 0em;
+}
+#kv .filter_bar .inner .filter_block.open > dd {
+  display: block;
+}
+#kv .filter_bar .inner .filter_block.open > dd:has(.f_category.open) .filter_caption ._origin {
+  display: none;
+}
+#kv .filter_bar .inner .filter_block.open > dd:has(.f_category.open) .filter_caption ._open {
+  display: flex;
+}
+@media all and (min-width: 1024px) {
+  #kv .inner .kv_container {
+    width: 80%;
+  }
+  #kv .inner .kv_container .kv_content {
+    font-size: 1em;
+  }
+  #kv .filter_bar {
+    z-index: 5;
+  }
+  #kv .filter_bar .inner .filter_block:first-child::after {
+    z-index: 999;
+  }
+  #kv .filter_bar .inner .filter_block .filter_caption > div {
+    padding: 2em;
+  }
+  #kv .filter_bar .inner .filter_block > dd {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  #kv .filter_bar .inner .filter_block > dd .f_category.open > dd {
+    height: 25vh;
+  }
+}
+
+#character_list {
+  background-color: #F5F5F5;
+  padding: 2em 0;
+}
+#character_list .inner .list {
+  justify-content: space-between;
+}
+#character_list .inner .list li {
+  margin-top: 5%;
+  width: 47.5%;
+}
+#character_list .inner .list li .content {
+  position: relative;
+  margin: 0.5em auto;
+  width: calc(100% - 2em);
+  font-size: 1.65em;
+}
+#character_list .inner .list li .content .index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(calc(-100% - 0.3em));
+}
+#character_list .inner .list li .content .title {
+  margin-top: 0.5em;
+  color: #999;
+  font-size: 0.6em;
+}
+@media all and (min-width: 1024px) {
+  #character_list .inner .list li {
+    width: 30%;
+    max-width: 350px;
+  }
+}

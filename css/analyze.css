@@ -1,0 +1,104 @@
+:root {
+  --red_word:#AF002C;
+  --swiper-navigation-color: #333;
+  --swiper-pagination-color: var(--red_word);
+}
+
+#data_slide {
+  padding: 3em 0;
+}
+#data_slide .inner {
+  position: relative;
+}
+#data_slide .inner .swiper {
+  padding: 3em 0;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#data_slide .inner .swiper .swiper-slide {
+  justify-content: center;
+  width: 33%;
+}
+#data_slide .inner .swiper .swiper-slide .data,
+#data_slide .inner .swiper .swiper-slide .content {
+  width: max-content;
+  margin: 0 auto;
+}
+#data_slide .inner .swiper .swiper-slide .data {
+  color: var(--red_word);
+  font-weight: 600;
+  font-size: 3em;
+}
+#data_slide .inner .swiper .swiper-slide .data .percent {
+  font-size: 0.5em;
+}
+#data_slide .inner .swiper .swiper-slide .content {
+  margin-top: 0.5em;
+  line-height: 1.5;
+  text-align: center;
+}
+#data_slide .inner .swiper .swiper-pagination {
+  bottom: 0.5em;
+}
+
+#data_pie {
+  padding: 3em 0;
+}
+#data_pie .inner {
+  gap: 1em;
+}
+#data_pie .inner .flex_item {
+  width: 100%;
+}
+#data_pie .inner .flex_item .empty {
+  background-color: #eee;
+  padding-top: 100%;
+}
+@media all and (min-width: 1024px) {
+  #data_pie .inner .flex_item {
+    width: 30%;
+  }
+}
+
+#feature {
+  padding: 3em 0;
+  background-color: #F2F2F2;
+}
+#feature .inner .flex_wrap {
+  padding: 0 5%;
+}
+#feature .inner .flex_wrap .flex_item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em 20%;
+}
+#feature .inner .flex_wrap .flex_item ~ .flex_item {
+  border-top: 1px solid #ddd;
+}
+#feature .inner .flex_wrap .flex_item .index {
+  clip-path: polygon(0% 0%, 100% 0, 100% 60%, 40% 100%, 0 100%);
+  line-height: 0.8;
+  font-size: 5em;
+  font-weight: 600;
+  color: #D36174;
+}
+#feature .inner .flex_wrap .flex_item .content p {
+  line-height: 1.3;
+}
+@media all and (min-width: 1024px) {
+  #feature {
+    background-color: #fff;
+  }
+  #feature .inner .flex_wrap {
+    padding: 0 2em;
+    gap: 2em;
+  }
+  #feature .inner .flex_wrap .flex_item {
+    width: calc((100% - 8em) / 5);
+    padding: 0;
+    border: 0 !important;
+  }
+}

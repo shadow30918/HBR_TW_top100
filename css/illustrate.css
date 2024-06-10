@@ -1,0 +1,65 @@
+:root {
+  --red_word:#AF002C;
+  --swiper-navigation-color: #333;
+  --swiper-pagination-color: var(--red_word);
+}
+
+@media (max-width: 1023px) {
+  #rules .inner._content {
+    width: 100%;
+  }
+}
+#rules .inner .rules_caption {
+  background-color: #000;
+  color: #fff;
+  padding: 0.7em 0;
+  text-align: center;
+}
+#rules .inner > dl {
+  padding: 0 3em;
+}
+#rules .inner > dl dt .caption {
+  color: var(--red_word);
+  font-weight: 600;
+  font-size: 1.2em;
+  padding: 1.5em 0;
+}
+#rules .inner > dl dd {
+  padding-bottom: 1.5em;
+}
+#rules .inner > dl dd p {
+  line-height: 1.5;
+}
+#rules .inner > dl dd p ~ p {
+  margin-top: 1.5em;
+}
+#rules .inner > dl:nth-child(2n-1) {
+  background-color: #F2F2F2;
+  border: 1px solid #ddd;
+  border: 1px 0 1px 0;
+}
+@media all and (min-width: 1024px) {
+  #rules {
+    padding: 3em 0;
+  }
+  #rules .inner > dl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+  }
+  #rules .inner > dl dt {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 15em;
+  }
+  #rules .inner > dl dt .caption {
+    margin: 0 auto;
+    width: max-content;
+  }
+  #rules .inner > dl dd {
+    padding: 1em 0;
+    padding-right: 4em;
+    font-size: 0.9em;
+  }
+}

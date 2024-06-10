@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property = "og:type" content="website" />
+	<meta property = "og:title" content="HBR台灣企業領袖100強" />
+	<meta property = "og:url" content="">
+	<meta property = "og:description" content="" >
+	<meta property = "og:image" content="img/og_img.jpg" />
+
+	<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<link rel="icon" href="img/favicon.svg" type="image/x-icon" />
+
+	<!-- js -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+    <script src="js/default.js"></script>
+
+	<title>HBR台灣企業領袖100強</title>
+</head>
+
+<body page="index">
+   
+    <header class="show">
+        <div class="logo"><a href="https://www.hbrtaiwan.com/"><img class="origin" src="img/HBR_LOGO.svg"><img class="white" src="img/HBR_LOGO_W.svg"></a></div>
+        
+        <div class="hem">
+            <div class="_t"></div>
+            <div class="_m"></div>
+            <div class="_b"></div>
+        </div>
+        <nav>
+            <ul class="nav_list">
+                <li class="nav_item" caption="index"><a href="index.html"><h2>領袖搜尋</h2></a></li>
+                <li class="nav_item" caption="ranking"><a href="ranking.html"><h2>最新榜單</h2></a></li>
+                <li class="nav_item" caption="analyze"><a href="analyze.html"><h2>榜單分析</h2></a></li>
+                <li class="nav_item" caption="illustrate"><a href="illustrate.html"><h2>評選說明</h2></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="kv">
+        <div class="inner">
+            <div class="kv_container">
+                <div class="kv_main _animation"></div>
+                <div class="kv_content _animation">
+                    <p>
+                        《哈佛商業評論》兩年一度最具公信力調查，<br>
+                        以企業領袖為調查主體，且關注長期績效而非短期表現，<br>
+                        完整呈現引領台灣產業脈動的企業領袖名單。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter_bar">
+            <div class="inner">
+                <dl class="filter_block">
+                    <dt>
+                        <div class="filter_caption">
+                            <div class="_origin">
+                                <div class="caption">企業領袖</div><div class="icon"><img src="img/index/icon_search.svg"></div>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd>
+                        <div class="filter_caption">
+                            <div class="_origin _open_filter">
+                                <div class="caption">搜尋企業領袖</div>
+                                <div class="reset c-gray" onclick="filter_reset()">重置</div>
+                                <div class="close"><div class="icon"><img src="img/index/icon_close.svg"></div></div>
+                            </div>
+                            <div class="_open _open_filter">
+                                <div class="search"><input type="text" name="search_leader" placeholder="輸入姓名"><div class="icon"><img src="img/index/icon_search.svg"></div></div>
+                                <div class="reset c-gray" onclick="filter_reset()">重置</div>
+                                <div class="close"><div class="icon"><img src="img/index/icon_close.svg"></div></div>
+                            </div>
+                        </div>
+                        <dl class="f_category">
+                            <dt><div class="f_caption" origin="所有產業" type="type1">所有產業</div><div class="icon"><img src="img/index/icon_arrow.svg"></div></dt>
+                            <dd>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類1</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type1" value="航運業">航運業</label></li>
+                                            <li><label><input type="radio" name="type1" value="空運業">空運業</label></li>
+                                            <li><label><input type="radio" name="type1" value="半導體業">半導體業</label></li>
+                                            <li><label><input type="radio" name="type1" value="電腦周邊設備">電腦周邊設備</label></li>
+                                            <li><label><input type="radio" name="type1" value="物流業">物流業</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類2</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type1" value="銀行業">銀行業</label></li>
+                                            <li><label><input type="radio" name="type1" value="保險業">保險業</label></li>
+                                            <li><label><input type="radio" name="type1" value="證券業">證券業</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <dl class="f_category">
+                            <dt><div class="f_caption" origin="所有公司" type="type2">所有公司</div><div class="icon"><img src="img/index/icon_arrow.svg"></div></dt>
+                            <dd>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類1</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type2" value="公司小分類1">公司小分類1</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類2">公司小分類2</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類3">公司小分類3</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類2</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type2" value="公司小分類4">公司小分類4</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類5">公司小分類5</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類6">公司小分類6</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類7">公司小分類7</label></li>
+                                            <li><label><input type="radio" name="type2" value="公司小分類8">公司小分類8</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+
+                        <dl class="f_category">
+                            <dt><div class="f_caption" origin="姓名" type="type3">姓名</div><div class="c-gray">必填</div><div class="icon"><img src="img/index/icon_arrow.svg"></div></dt>
+                            <dd>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類1</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type3" value="徐旭東1">徐旭東1</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東2">徐旭東2</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東3">徐旭東3</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl class="s_category">
+                                    <dt><div class="s_caption">大分類2</div></dt>
+                                    <dd>
+                                        <ul class="list">
+                                            <li><label><input type="radio" name="type3" value="徐旭東4">徐旭東4</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東5">徐旭東5</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東6">徐旭東6</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東7">徐旭東7</label></li>
+                                            <li><label><input type="radio" name="type3" value="徐旭東8">徐旭東8</label></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </dd>
+                        </dl>
+                    </dd>
+                </dl>
+
+
+                <dl class="filter_block">
+                    <dt>
+                        <div class="filter_caption">
+                            <div class="_origin">
+                                <div class="caption">年度榜單</div><div class="icon"><img src="img/index/icon_arrow.svg"></div>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd>
+                        <div class="filter_caption">
+                            <div class="_origin _open_filter">
+                                <div class="caption">年度榜單</div><div class="close icon"><img src="img/index/icon_close.svg"></div>
+                            </div>
+                        </div>
+                        <ul class="list years">
+                            <li><label><input type="radio" name="year" value="2024">2024</label></li>
+                            <li><label><input type="radio" name="year" value="2022">2022</label></li>
+                            <li><label><input type="radio" name="year" value="2020">2020</label></li>
+                            <li><label><input type="radio" name="year" value="2018">2018</label></li>
+                            <li><label><input type="radio" name="year" value="2016">2016</label></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="character_list">
+        <div class="inner">
+            <ul class="list flex">
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="leader.html">
+                        <div class="photo"><img src="img/index/characters/001.jpg"></div>
+                        <div class="content">
+                            <div class="index">1</div>
+                            <div class="name"><h3>徐旭東</h3></div>
+                            <div class="title">遠東集團董事長</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="cta">
+                <div class="cta_btn"><a href="ranking.html">觀看完整榜單 <div class="icon"><img src="img/icon_arrow_full.svg"></div></a></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="special_column">
+        <div class="inner ">
+            <div class="list_wrap flex">
+                <div class="big_side">
+                    <a href="" class="column_item">
+                        <div class="img"><img src="img/column/01.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="caption"><h4>破壞式創新很好，但不具破壞的創新也有價值</h4></div>
+                            <div class="date">2024/05/07</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="list_side">
+                    <a href="" class="column_item">
+                        <div class="img"><img src="img/column/01.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="caption"><h4>破壞式創新很好，但不具破壞的創新也有價值</h4></div>
+                            <div class="date">2024/05/07</div>
+                        </div>
+                    </a>
+                    <a href="" class="column_item">
+                        <div class="img"><img src="img/column/01.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="caption"><h4>破壞式創新很好，但不具破壞的創新也有價值</h4></div>
+                            <div class="date">2024/05/07</div>
+                        </div>
+                    </a>
+                    <a href="" class="column_item">
+                        <div class="img"><img src="img/column/01.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="caption"><h4>破壞式創新很好，但不具破壞的創新也有價值</h4></div>
+                            <div class="date">2024/05/07</div>
+                        </div>
+                    </a>
+                    <a href="" class="column_item">
+                        <div class="img"><img src="img/column/01.jpg" alt=""></div>
+                        <div class="content">
+                            <div class="caption"><h4>破壞式創新很好，但不具破壞的創新也有價值</h4></div>
+                            <div class="date">2024/05/07</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="cta">
+                <div class="cta_btn"><a href="https://www.hbrtaiwan.com/taiwan-ceo" target="_blank">更多企業領袖專訪 <div class="icon"><img src="img/icon_arrow_full.svg"></div></a></div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <div id="privarite_popup">
+        <div class="content">
+            <p>為提供您更多優質內容，本網站使用cookies分析技術。若繼續閱覽本網站內容，即表示您同意我們使用cookies，關於更多cookies資訊請閱讀我們的<strong>隱私權政策</strong>。</p>
+        </div>
+        <div class="confirm">
+            <div class="btn _black"><a href="">了解</a></div>
+            <div class="btn _gray"><a href="javascript:close_privarite_popup()">關閉</a></div>
+        </div>
+    </div>
+
+    <footer >
+        <div class="content">
+            <div class="inner flex">
+                <div class="flex_item _main">
+                    <div class="subtitle"><h4>哈佛商業評論</h4></div>
+                    <div class="title"><h1>2024台灣<br>企業領袖100強</h1></div>
+                    <div class="cta flex">
+                        <div class="cta_btn"><a href="https://www.hbrtaiwan.com/magazine/HBR193" target="_blank">閱讀完整內容</a></div>
+                        <div class="cta_btn"><a href="https://service.hbrtaiwan.com/mall/subscribe" target="_blank">首月60元 / 體驗數位版</a></div>
+                    </div>
+                </div>
+                <div class="flex_item _img">
+                    <div class="monitor"><img src="img/footer_monitor.png"></div>
+                </div>
+            </div>
+        </div>
+        <div class="organiser">
+            <div class="inner flex">
+                <div class="_main flex_item">
+                    <div class="caption">主辦單位：</div>
+                    <div class="logo _01"><img src="img/footer_logo1.png" alt="遠見天下文化事業群"></div>
+                    <div class="logo _02"><img src="img/HBRLOGO.png" alt="哈佛商業評論"></div>
+                </div>
+                <div class="_co flex_item">
+                    <div class="caption">協辦單位：</div>
+                    <div class="logo _03"><img src="img/footer_logo2.png" alt="遠見-天下文化教育基金會"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="inner">
+                <div class="info flex">
+                    <ul class="footer_infomation">
+                        <li>聯絡信箱：hbrtaiwan@cwgv.com.tw​</li>
+                        <li>讀者服務電話：02-2662-0012</li>
+                        <li>服務時間：週一至週五9:00～12:30；13:30～17:00</li>
+                    </ul>
+                    <div class="cpr">哈佛商業評論全球繁體中文版 Copyright©1999~2024 遠見天下文化出版股份有限公司. All rights reserved.​</div>
+                </div>
+                <ul class="social_media flex">
+                    <li><a href="https://www.facebook.com/hbrtaiwan" target="_blank" title="Facebook"><img src="img/Social Icons_fb.svg"></a></li>
+                    <li><a href="https://line.me/R/ti/p/%40zfc8021l" target="_blank" title="LINE"><img src="img/Social Icons_line.svg"></a></li>
+                    <li><a href="https://www.instagram.com/hbrtaiwan" target="_blank" title="Instagram"><img src="img/Social Icons_ig.svg"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCNY32GQOXDAV20ziNZLyXnA" target="_blank" title="YouTube"><img src="img/Social Icons_yt.svg"></a></li>
+                    <li><a href="https://tw.linkedin.com/company/hbrtaiwan" target="_blank" title="Linkedin"><img src="img/Social Icons_in.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </footer>
+    
+    <script src="js/index.js"></script>
+</body>
+
+</html>
